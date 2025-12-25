@@ -45,8 +45,8 @@ public class CourseMapperTest {
     @Test
     void convertEntityListToDtoListTest() {
         List<CourseEntity> entityList = new ArrayList<>();
-        entityList.add(new CourseEntity(1L, "Java", "Desc", 3));
-        entityList.add(new CourseEntity(2L, "Python", "Desc", 2));
+        entityList.add(new CourseEntity(1L, "Java", "Desc", 3, null));
+        entityList.add(new CourseEntity(2L, "Python", "Desc", 2, null));
         List<CourseDto> dtoList = courseMapper.toDtoList(entityList);
         Assertions.assertNotNull(dtoList);
         Assertions.assertEquals(entityList.size(), dtoList.size());
