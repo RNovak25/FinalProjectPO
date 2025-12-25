@@ -6,7 +6,7 @@ import java.util.List;
 public interface CourseService {
     List<CourseDto> getAll();
     CourseDto getById(Long id);
-    void addCourse(CourseDto courseDto);
+    CourseDto addCourse(CourseDto courseDto);
     void updateCourse(Long id, CourseDto courseDto);
     void deleteCourse(Long id);
 }

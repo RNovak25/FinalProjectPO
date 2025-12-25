@@ -1,5 +1,6 @@
 package com.example.demo.entity;
 
+import com.example.demo.model.UserModel;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,4 +23,8 @@ public class CourseEntity {
     private String description;
 
     private int durationMonths;
+
+    @ManyToOne
+    @JoinColumn(name = "author_id")
+    private UserModel author;
 }
